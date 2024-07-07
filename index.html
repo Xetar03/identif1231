@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <link rel="stylesheet" href="style/simple.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Identif' game</title>
+</head>
+
+<body onload="startGame()">
+    <header>
+        <h1>Identif' game</h1>
+        <button onclick="openNav()">☝️ LISTE VEHICULES</button>
+        <button onclick="loadImage()">▶️ JOUER !</button>
+    </header>
+    <div id="mySidenav" class="sidenav">
+        <button style="display:block;margin-left: auto;margin-right: auto;"
+            onclick="uncheck_all()">Tout
+            Décocher</button>
+        <button style="display:block;margin-left: auto;margin-right: auto;"
+            onclick="check_all()">Tout
+            cocher</button>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul id="tankslist">
+        </ul>
+    </div>
+    <!-- navbar -->
+    <main>
+        <div class="card">
+            <div class="card__inner">
+                <div class="card__face card__face--front">
+                    <img id="test"></img>
+                </div>
+                <div class="card__face card__face--back">
+                    <div class="card__content">
+                        <div class="card__header">
+                            <h2>Réponse</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3 id="answer"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button style="width: 100%; background-color: green;" onclick="loadImage()">OK</button>
+    </main>
+	<script src="scripts/main.js"></script>
+	<script src="scripts/nav.js"></script>
+    <footer>
+        <p>Made with ❤️ by mimi</p>
+    </footer>
+</body>
+
+</html>
